@@ -6,9 +6,12 @@ import Badge from '../components/Badge';
 import TravelStories from '../components/TravelStories';
 import { tours } from '../data';
 import { useNavigate } from 'react-router-dom';
+import { useAppDispatch } from '../store/hooks';
+import { addItem } from '../store/cartSlice';
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     document.title = 'მთავარი | GeoTours';
@@ -41,6 +44,14 @@ const Home: React.FC = () => {
               <div className="mt-4 flex flex-wrap gap-2 px-1 pb-4">
                 <Badge label={tour.destination} />
                 <Badge label={`${tour.price} ₾`} />
+              </div>
+              <div className="mt-auto px-1">
+                <button 
+                  onClick={() => dispatch(addItem(tour))}
+                  className="w-full bg-accent text-white font-medium py-2 rounded-md hover:bg-yellow-600 active:scale-95 transition-all"
+                >
+                  დაჯავშნა
+                </button>
               </div>
             </div>
           ))}

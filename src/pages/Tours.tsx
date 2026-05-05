@@ -3,9 +3,12 @@ import Section from '../components/Section';
 import Card from '../components/Card';
 import Badge from '../components/Badge';
 import { tours } from '../data';
+import { useAppDispatch } from '../store/hooks';
+import { addItem } from '../store/cartSlice';
 
 const Tours: React.FC = () => {
   const [filter, setFilter] = useState<string>('all');
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     document.title = 'ტურები | GeoTours';
@@ -53,6 +56,14 @@ const Tours: React.FC = () => {
               <Badge label={tour.destination} />
               <Badge label={tour.duration} />
               <Badge label={`${tour.price} ₾`} />
+            </div>
+            <div className="mt-auto px-1">
+              <button 
+                onClick={() => dispatch(addItem(tour))}
+                className="w-full bg-accent text-white font-medium py-2 rounded-md hover:bg-yellow-600 active:scale-95 transition-all"
+              >
+                დაჯავშნა
+              </button>
             </div>
           </div>
         ))}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import type { NavLink } from '../types';
+import { useAppSelector } from '../store/hooks';
 
 interface HeaderProps {
   links: NavLink[];
@@ -8,6 +9,8 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ links }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const cartItems = useAppSelector(state => state.cart.items);
+  const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   const toggleMenu = () => {
     setIsMobileMenuOpen((prev) => !prev);
@@ -25,7 +28,7 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-8 items-center">
             {links.map((link) => (
               <Link
                 key={link.path}
@@ -35,10 +38,32 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
                 {link.label}
               </Link>
             ))}
+            {/* Cart Icon */}
+            <div className="relative text-gray-600 hover:text-primary transition-colors cursor-pointer flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              {totalItems > 0 && (
+                <span className="absolute -top-2 -right-2 bg-accent text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">
+                  {totalItems}
+                </span>
+              )}
+            </div>
           </nav>
 
           {/* Mobile menu button */}
-          <div className="flex items-center md:hidden">
+          <div className="flex items-center md:hidden space-x-4">
+            {/* Mobile Cart Icon */}
+            <div className="relative text-gray-600">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              {totalItems > 0 && (
+                <span className="absolute -top-2 -right-2 bg-accent text-white text-xs font-bold w-4 h-4 flex items-center justify-center rounded-full">
+                  {totalItems}
+                </span>
+              )}
+            </div>
             <button
               onClick={toggleMenu}
               type="button"
