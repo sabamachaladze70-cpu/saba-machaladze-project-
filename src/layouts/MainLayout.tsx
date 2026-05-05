@@ -2,12 +2,15 @@ import React, { type ReactNode } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { navLinks } from '../data';
+import { useScrollTop } from '../hooks/useScrollTop';
 
 interface MainLayoutProps {
   children: ReactNode;
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+  useScrollTop();
+
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header links={navLinks} />
