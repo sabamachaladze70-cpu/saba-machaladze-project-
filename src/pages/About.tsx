@@ -14,15 +14,16 @@ const About: React.FC = () => {
         </div>
         <div className="w-full md:w-2/3 space-y-4 text-lg text-gray-700">
           <p>
-            Hello! I'm a passionate web developer focused on creating interactive and user-friendly web experiences. 
-            With a strong foundation in modern JavaScript frameworks like React, I love building applications that solve real-world problems.
+            მოგესალმებით GeoTours-ში! ჩვენ ვართ მოგზაურობაზე შეყვარებული გუნდი, რომლის მთავარი მიზანია
+            აღმოგაჩენინოთ საქართველოს დაფარული და ცნობილი სილამაზეები.
           </p>
           <p>
-            I specialize in front-end development, using tools like React, Vite, TypeScript, and Tailwind CSS to craft 
-            beautiful and responsive interfaces. I am always eager to learn new technologies and improve my skills.
+            წლების განმავლობაში ვთავაზობთ მაღალი ხარისხის, კომფორტულ და დაუვიწყარ ტურებს საქართველოს 
+            ყველა კუთხეში. ჩვენი პროფესიონალი გიდები და კომფორტული ტრანსპორტი უზრუნველყოფს თქვენს 
+            საუკეთესო გამოცდილებას.
           </p>
           <p>
-            When I'm not coding, you can find me exploring new technologies, reading, or enjoying a good cup of coffee.
+            შემოგვიერთდით და ერთად შევქმნათ მოგონებები, რომლებიც მთელი ცხოვრება გაგყვებათ!
           </p>
         </div>
       </div>

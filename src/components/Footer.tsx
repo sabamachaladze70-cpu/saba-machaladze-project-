@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
 
         {/* Copyright */}
         <div className="text-gray-400 text-sm text-center md:text-right">
-          <p>&copy; {currentYear} MyPortfolio. All rights reserved.</p>
+          <p>&copy; {currentYear} GeoTours. ყველა უფლება დაცულია.</p>
         </div>
       </div>
     </footer>

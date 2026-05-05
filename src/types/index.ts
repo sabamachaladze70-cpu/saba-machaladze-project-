@@ -1,10 +1,11 @@
-export interface Project {
+export interface Tour {
   id: number;
   title: string;
   description: string;
   imageUrl: string;
-  techStack: string[];
-  liveUrl?: string;
+  destination: string;
+  duration: string;
+  price: number;
 }
 
 export interface NavLink {

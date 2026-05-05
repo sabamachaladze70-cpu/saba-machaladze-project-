@@ -1,35 +1,38 @@
-import type { Project, NavLink } from '../types';
+import type { Tour, NavLink } from '../types';
 
 export const navLinks: NavLink[] = [
-  { label: 'Home', path: '/' },
-  { label: 'Projects', path: '/projects' },
-  { label: 'About', path: '/about' },
-  { label: 'Contact', path: '/contact' },
+  { label: 'მთავარი', path: '/' },
+  { label: 'ტურები', path: '/tours' },
+  { label: 'ჩვენ შესახებ', path: '/about' },
+  { label: 'კონტაქტი', path: '/contact' },
 ];
 
-export const projects: Project[] = [
+export const tours: Tour[] = [
   {
     id: 1,
-    title: 'E-commerce Platform',
-    description: 'A full-featured online store built with React and Tailwind CSS.',
-    imageUrl: 'https://via.placeholder.com/600x400?text=E-commerce',
-    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
-    liveUrl: 'https://example.com',
+    title: 'კახეთის ღვინის ტური',
+    description: 'დაათვალიერეთ სიღნაღი, ეწვიეთ ღვინის მარნებს და დააგემოვნეთ უგემრიელესი ქართული ღვინო.',
+    imageUrl: 'https://images.unsplash.com/photo-1596706927553-9d06637373f7?auto=format&fit=crop&q=80&w=800',
+    destination: 'კახეთი, საქართველო',
+    duration: '2 დღე',
+    price: 150,
   },
   {
     id: 2,
-    title: 'Task Management App',
-    description: 'A productivity app to organize tasks and projects.',
-    imageUrl: 'https://via.placeholder.com/600x400?text=Task+App',
-    techStack: ['React', 'React Router', 'TypeScript', 'CSS'],
-    liveUrl: 'https://example.com',
+    title: 'ყაზბეგის სათავგადასავლო ტური',
+    description: 'მოინახულეთ გერგეტის სამება, ისიამოვნეთ ულამაზესი მთის ხედებით და გაატარეთ დაუვიწყარი დრო ბუნებაში.',
+    imageUrl: 'https://images.unsplash.com/photo-1542289457-3f3640277bd6?auto=format&fit=crop&q=80&w=800',
+    destination: 'ყაზბეგი, საქართველო',
+    duration: '1 დღე',
+    price: 80,
   },
   {
     id: 3,
-    title: 'Portfolio Website',
-    description: 'My personal portfolio showcasing my projects and skills.',
-    imageUrl: 'https://via.placeholder.com/600x400?text=Portfolio',
-    techStack: ['React', 'Tailwind CSS', 'Vite'],
-    liveUrl: 'https://example.com',
+    title: 'სვანეთის ზღაპრული მოგზაურობა',
+    description: 'აღმოაჩინეთ უძველესი სვანური კოშკები, მესტია და უშგული ევროპის ყველაზე მაღალ დასახლებულ პუნქტში.',
+    imageUrl: 'https://images.unsplash.com/photo-1582298538104-e5cdd443224b?auto=format&fit=crop&q=80&w=800',
+    destination: 'სვანეთი, საქართველო',
+    duration: '4 დღე',
+    price: 350,
   }
 ];
