@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { NavLink } from '../types';
+import type { NavLink } from '../types';
 
 interface HeaderProps {
   links: NavLink[];
