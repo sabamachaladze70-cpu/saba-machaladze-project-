@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Hero from '../components/Hero';
 import Section from '../components/Section';
 import Card from '../components/Card';
 import Badge from '../components/Badge';
+import TravelStories from '../components/TravelStories';
 import { tours } from '../data';
 import { useNavigate } from 'react-router-dom';
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = 'მთავარი | GeoTours';
+  }, []);
+
   // Using the first 3 tours for the featured section
   const featuredTours = tours.slice(0, 3);
 
@@ -56,6 +62,8 @@ const Home: React.FC = () => {
           </div>
         </div>
       </Section>
+
+      <TravelStories />
     </div>
   );
 };

@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Section from '../components/Section';
 
 const About: React.FC = () => {
+  useEffect(() => {
+    document.title = 'ჩვენ შესახებ | GeoTours';
+  }, []);
+
   return (
     <Section title="About Me">
       <div className="flex flex-col md:flex-row items-center gap-10">

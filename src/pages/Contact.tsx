@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Section from '../components/Section';
 import Button from '../components/Button';
 import type { ContactForm } from '../types';
 
 const Contact: React.FC = () => {
+  useEffect(() => {
+    document.title = 'კონტაქტი | GeoTours';
+  }, []);
+
   const [formData, setFormData] = useState<ContactForm>({
     name: '',
     email: '',
