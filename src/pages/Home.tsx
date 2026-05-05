@@ -49,14 +49,14 @@ const Home: React.FC = () => {
 
       <Section 
         title="რას ამბობენ ჩვენზე" 
-        bgColor="bg-indigo-50"
+        bgColor="bg-blue-50"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white p-6 rounded-lg shadow-sm border border-indigo-100">
+          <div className="bg-white p-6 rounded-lg shadow-sm border border-blue-100">
             <p className="text-gray-600 italic mb-4">"საუკეთესო ორგანიზებული ტური ყაზბეგში! მეგზური იყო ძალიან ყურადღებიანი."</p>
             <div className="font-semibold text-gray-900">- მარიამ გ.</div>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-sm border border-indigo-100">
+          <div className="bg-white p-6 rounded-lg shadow-sm border border-blue-100">
             <p className="text-gray-600 italic mb-4">"სვანეთის ტურმა მოლოდინს გადააჭარბა. აუცილებლად ვიმოგზაურებთ თქვენთან ერთად კვლავ!"</p>
             <div className="font-semibold text-gray-900">- გიორგი დ.</div>
           </div>

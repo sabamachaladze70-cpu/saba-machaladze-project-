@@ -31,7 +31,7 @@ const TravelStories: React.FC = () => {
 
   return (
     <Section title="მოგზაურების ისტორიები" description="წაიკითხეთ ჩვენი მომხმარებლების შთაბეჭდილებები." bgColor="bg-white">
-      {loading && <p className="text-indigo-600 font-medium">იტვირთება მონაცემები...</p>}
+      {loading && <p className="text-primary font-medium">იტვირთება მონაცემები...</p>}
       
       {error && <p className="text-red-500 font-medium">{error}</p>}
       

@@ -19,7 +19,7 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="text-2xl font-bold text-indigo-600">
+            <Link to="/" className="text-2xl font-bold text-primary">
               GeoTours
             </Link>
           </div>
@@ -30,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
               <Link
                 key={link.path}
                 to={link.path}
-                className="text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-gray-600 hover:text-accent hover:underline px-3 py-2 rounded-md text-sm md:text-base font-medium transition-colors"
               >
                 {link.label}
               </Link>

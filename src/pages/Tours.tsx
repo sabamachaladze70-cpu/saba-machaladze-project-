@@ -23,19 +23,19 @@ const Tours: React.FC = () => {
       <div className="flex gap-4 mt-6">
         <button 
           onClick={() => setFilter('all')}
-          className={`px-4 py-2 rounded-md ${filter === 'all' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+          className={`px-4 py-2 rounded-md ${filter === 'all' ? 'bg-primary text-white' : 'bg-gray-200 text-gray-700'} hover:bg-opacity-90 transition-colors`}
         >
           ყველა
         </button>
         <button 
           onClick={() => setFilter('1 დღე')}
-          className={`px-4 py-2 rounded-md ${filter === '1 დღე' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+          className={`px-4 py-2 rounded-md ${filter === '1 დღე' ? 'bg-primary text-white' : 'bg-gray-200 text-gray-700'} hover:bg-opacity-90 transition-colors`}
         >
           1 დღიანი
         </button>
         <button 
           onClick={() => setFilter('2 დღე')}
-          className={`px-4 py-2 rounded-md ${filter === '2 დღე' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+          className={`px-4 py-2 rounded-md ${filter === '2 დღე' ? 'bg-primary text-white' : 'bg-gray-200 text-gray-700'} hover:bg-opacity-90 transition-colors`}
         >
           2 დღიანი
         </button>
