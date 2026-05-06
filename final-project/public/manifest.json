@@ -1,0 +1,15 @@
+{
+  "short_name": "GeoTours",
+  "name": "GeoTours - აღმოაჩინე საქართველო",
+  "icons": [
+    {
+      "src": "icons.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#D35400",
+  "background_color": "#FEF9F3"
+}
