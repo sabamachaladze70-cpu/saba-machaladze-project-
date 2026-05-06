@@ -1,38 +1,29 @@
 import type { NavLink, Tour } from '../types';
 import kaxetiImg from '../assets/kaxeti_high.png';
-import kaxetiThumb from '../assets/kaxeti.webp';
 import kaxetiGal from '../assets/kaxeti_gal1.png';
 
 import yazbegiImg from '../assets/yazbegi_high.png';
-import yazbegiThumb from '../assets/yazbegi.webp';
 import yazbegiGal from '../assets/yazbegi_gal1.png';
 
 import svanetiImg from '../assets/svaneti_high.png';
-import svanetiThumb from '../assets/svaneti.webp';
 import svanetiGal from '../assets/svaneti_gal1.png';
 
 import batumiImg from '../assets/batumi_high.png';
-import batumiThumb from '../assets/batumi.jpg';
 import batumiGal from '../assets/batumi_gal1.png';
 
 import vardziaImg from '../assets/vardzia_high.png';
-import vardziaThumb from '../assets/vardzia.jpg';
 import vardziaGal from '../assets/vardzia_gal1.png';
 
 import tushetiImg from '../assets/tusheti_high.png';
-import tushetiThumb from '../assets/tusheti.jpg';
 import tushetiGal from '../assets/tusheti_gal1.png';
 
 import imeretiImg from '../assets/imereti_high.png';
-import imeretiThumb from '../assets/mereti.jpg';
 import imeretiGal from '../assets/imereti_gal1.png';
 
 import mcxetaImg from '../assets/mcxeta_high.png';
-import mcxetaThumb from '../assets/mcxeta.jpg';
 import mcxetaGal from '../assets/mcxeta_gal1.png';
 
 import rachaImg from '../assets/racha_high.png';
-import rachaThumb from '../assets/racha.jpg';
 
 export const navLinks: NavLink[] = [
   { label: 'მთავარი', path: '/' },
